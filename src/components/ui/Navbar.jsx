@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState } from "react"; 
 import { useSelector, useDispatch } from "react-redux";
 import Link from "next/link";
 import {
@@ -43,8 +43,7 @@ export default function Navbar() {
     { id: 2, name: "Activities", href: "/" },
     { id: 3, name: "Stories", href: "/" },
     { id: 4, name: "Latest", href: "/" },
-    // { id: 5, name: "Browse By", href: "/" },
-    // { id: 6, name: "Trekking", href: "/" },
+  
   ];
 
   const NavIcons = [
