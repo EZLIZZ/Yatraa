@@ -13,7 +13,6 @@ import {
   MessageSquareText,
   Search,
   Menu,
-  SlidersHorizontal,
 } from "lucide-react";
 import {
   DropdownMenu,
@@ -119,7 +118,7 @@ export default function Navbar() {
                     </Link>
                   ))}
                   <div className="border-t my-1" />
-                 {/* <button
+                  {/* <button
                     onClick={() => {
                       toggleSidebar();
                       setMenuOpen(false);
@@ -150,11 +149,17 @@ export default function Navbar() {
             {/* Profile Avatar */}
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
-                <img
-                  src={user?.photoURL || "/me.jpg"}
-                  alt="Profile"
-                  className="w-8 h-8 rounded-full object-cover cursor-pointer"
-                />
+                {user?.photoURL ? (
+                  <img
+                    src={user.photoURL}
+                    alt="Profile"
+                    className="w-8 h-8 rounded-full object-cover cursor-pointer"
+                  />
+                ) : (
+                  <div className="w-8 h-8 rounded-full bg-white text-primary text-xl flex items-center justify-center font-semibold cursor-pointer uppercase">
+                    {user?.displayName?.charAt(0) || "?"}
+                  </div>
+                )}
               </DropdownMenuTrigger>
               <DropdownMenuContent className="w-40 mt-2">
                 <DropdownMenuItem onClick={handleLogout}>

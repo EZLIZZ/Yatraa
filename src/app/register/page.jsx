@@ -1,10 +1,10 @@
 import Image from "next/image";
-import LoginForm from "./_components/LoginForm";
-export default function LoginPage() {
+import SignupForm from "./_components/SignupForm";
+export default function RegisterPage() {
   return (
     <div className="h-screen w-screen overflow-hidden">
       <div className="grid sm:grid-cols-2 grid-cols-1 h-full sm:pt-5 pt-24 items-center md:gap-20 gap-10 px-8">
-        <LoginForm />
+        <SignupForm />
         <div className="grid grid-cols-2 gap-5 p-5 max-h-[600px] max-w-xl">
           <div className="flex flex-col gap-5">
             <img
