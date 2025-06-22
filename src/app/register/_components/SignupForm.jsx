@@ -84,7 +84,7 @@ export default function SignupForm() {
       };
 
       dispatch(loginSuccess(safeUser));
-      router.push("/blogs");
+      router.push("/login");
     } catch (error) {
       dispatch(loginFailure(error.message));
       form.setError("email", { message: "Signup failed. " + error.message });
