@@ -4,10 +4,10 @@ import Navbar from "@/components/ui/Navbar";
 import ReduxProvider from "@/store/ReduxProvider";
 // import { SidebarProvider } from "@/components/ui/sidebar";
 // import LeftSidebar from "@/components/ui/LeftSidebar";
-
+import { AOSProvider } from "@/lib/utils/AOSProvider";
 
 export const metadata: Metadata = {
-  title: "Wonders",
+  title: "Yatraa",
   description: "Travel the World",
 };
 
@@ -16,7 +16,6 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-
   return (
     <html lang="en">
       <head>
@@ -26,14 +25,12 @@ export default function RootLayout({
         />
       </head>
       <body>
-      <ReduxProvider>
+        <AOSProvider />
 
-          
-        <Navbar />
+        <ReduxProvider>
+          <Navbar />
 
-                
-
-        <main>{children}</main>
+          <main>{children}</main>
         </ReduxProvider>
       </body>
     </html>

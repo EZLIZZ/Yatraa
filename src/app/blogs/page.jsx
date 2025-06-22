@@ -25,8 +25,9 @@ export default function Blog() {
   return (
     <ProtectedRoute>
       <div className="sm:pl-10 pl-7 pr-9 mt-8">
+        <div data-aos="fade-down">
         <p className="text-2xl text-primary pb-5">Blogs</p>
-        <div className="flex justify-between">
+        <div className="flex justify-between" >
           <div className="flex pb-7">
             {BlogNav.map((nav) => (
               <p
@@ -47,9 +48,10 @@ export default function Blog() {
             <SlidersHorizontal />
           </button>
         </div>
+        </div>
 
         {/* Made for You Section  */}
-        <div className="mb-8">
+        <div className="mb-8" data-aos="fade-left">
           <div className="flex items-center justify-between mb-4">
             <p className="text-primary text-xl font-light">Made for You</p>
             <div className="flex space-x-2">
@@ -70,7 +72,7 @@ export default function Blog() {
         </div>
 
         {/* Popular in Tavoris Section  */}
-        <div className="mb-8">
+        <div className="mb-8" data-aos="fade-left" data-aos-delay="500">
           <div className="flex items-center justify-between mb-4">
             <p className="text-primary text-xl font-light">Popular in Tavoris</p>
             <div className="flex space-x-2">
@@ -91,8 +93,10 @@ export default function Blog() {
         </div>
         
         {/* Recently Added Section*/}
+        <div data-aos="fade-left" data-aos-delay="700">
         <p className="text-primary text-xl font-light py-4">Recently Added</p>
         <RecentlyAdded data={destinationPages[0]} />
+        </div>
       </div>
 
       <RightSidebar isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} />

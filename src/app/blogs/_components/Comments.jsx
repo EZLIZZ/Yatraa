@@ -15,7 +15,7 @@ const review = [
 ]
 export default function Comments(){
     return(
-        <div className="grid grid-cols-2 gap-5">
+        <div className="grid grid-cols-2 gap-5" data-aos="fade-left">
         {review.map((items)=>(       
 
 <div className="border-gray-100 border-2 p-5 rounded-lg" key={items.id}>

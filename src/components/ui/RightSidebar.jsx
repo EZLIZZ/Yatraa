@@ -23,7 +23,7 @@ function SidebarBlogItem({ image, category, title }) {
 }
 
 export default function RightSidebar({ isOpen, onClose }) {
-  if (!isOpen) return null;
+  // if (!isOpen) return null;
 
   const recentBlogs = [
     { category: "Adventures", title: "5 adventures to experience in Nepal" },
@@ -38,8 +38,13 @@ export default function RightSidebar({ isOpen, onClose }) {
   ];
 
   return (
-    <aside className="fixed right-0 top-0 pt-24 sm:w-80 w-full border-l sm:px-7 px-10 z-40 py-4 min-h-screen bg-white">
-      <div className="flex items-center justify-between mb-4">
+<aside
+  className={`
+    fixed right-0 top-0 pt-24 sm:w-80 w-full border-l sm:px-7 px-10 z-40 py-4 min-h-screen bg-white
+    transform transition-transform duration-600 ease-in-out
+    ${isOpen ? "translate-x-0" : "translate-x-full"}
+  `}
+>      <div className="flex items-center justify-between mb-4">
         <h2 className="text-2xl font-light text-primary/90">More</h2>
         <Button variant="ghost" size="icon" onClick={onClose}>
           <X className="h-7 w-7 text-primary/90" />

@@ -36,28 +36,29 @@ export default function BlogSlugPage() {
   return (
     <ProtectedRoute>
       <div className="px-7 sm:px-12 py-10 w-full sm:w-[70%]">
-      <div className="text-sm text-primary flex items-center gap-2 mb-4">
+      <div className="text-sm text-primary flex items-center gap-2 mb-4" data-aos="fade-down" >
       <Link href="/blogs" className="hover:underline text-primary">
         Blogs
       </Link>
       <span className="text-gray-400">&gt;</span>
       <span className="text-primary  truncate underline max-w-[60%]">{blog.title}</span>
     </div>
+    <div data-aos="fade-left" >
         <h1 className="text-3xl font-bold text-primary mb-4">{blog.title}</h1>
         <p className="text-secondary mb-6">
           {blog.date} • {blog.readTime}
         </p>
-
+</div>
         <Image
           src={blog.image}
           alt={blog.title}
           width={718}
           height={287}
-          className="rounded-lg object-cover w-full h-[287px] mb-8 transition-all duration-300"
+          className="rounded-lg object-cover w-full h-[287px] mb-8 transition-all duration-300" data-aos="fade-left" data-aos-delay="500"
         />
 
         <div className="text-gray-500 font-light leading-relaxed space-y-12">
-          <div>
+          <div data-aos="fade-left" data-aos-delay="500" >
             <p className="text-center text-primary text-xl mb-2">Introduction</p>
             <p>{blog.introduction}</p>
           </div>
@@ -66,7 +67,7 @@ export default function BlogSlugPage() {
             <Separator className="!w-[30%] bg-secondary" />
           </div>
 
-          <div className="grid grid-cols-2 gap-7">
+          <div className="grid grid-cols-2 gap-7" data-aos="fade-left" data-aos-delay="700">
             <div className="space-y-2">
               <h2 className="text-xl font-light text-primary">1. {blog.subtitle}</h2>
               <p>{blog.subtitleText}</p>
@@ -74,7 +75,7 @@ export default function BlogSlugPage() {
             <img className="rounded-lg" src={blog.subtitlephoto} />
           </div>
 
-          <div className="space-y-2">
+          <div className="space-y-2" data-aos="fade-left">
             <h2 className="text-xl font-light text-primary text-center">2. {blog.subtitle2}</h2>
             <p>{blog.subtitle2Text}</p>
             <div className="grid grid-cols-3 gap-4 mt-4">
@@ -101,11 +102,11 @@ export default function BlogSlugPage() {
             <Separator className="!w-[30%] bg-secondary" />
           </div>
 
-          <div className="space-y-2">
+          <div className="space-y-2" data-aos="fade-left">
             <h2 className="text-xl font-light text-center text-primary">Conclusion</h2>
             <p>{blog.conclusion}</p>
           </div>
-          <p className="text-left text-xl font-light text-primary">Comments</p>
+          <p className="text-left text-xl font-light text-primary " data-aos="fade-left">Comments</p>
             
 <Comments />
         </div>

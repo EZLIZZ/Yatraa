@@ -98,7 +98,7 @@ export default function LoginForm() {
   };
 
   return (
-    <div className="h-full flex justify-end items-center">
+    <div className="h-full flex justify-end items-center" data-aos="fade-right">
       <Form {...form}>
         <form
           onSubmit={form.handleSubmit(onSubmit)}

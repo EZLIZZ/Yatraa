@@ -48,7 +48,7 @@ export default function RightSide() {
 //   }
 
   return (
-<aside className="hidden lg:fixed right-0 top-0 pt-24 w-80 border-l px-7 z-40 py-4 min-h-screen bg-white lg:block">
+<aside className="hidden lg:fixed right-0 top-0 pt-24 w-80 border-l px-7 z-40 py-4 min-h-screen bg-white lg:block" data-aos="fade-left">
 <div className="flex items-center justify-between mb-4">
         <h2 className="text-2xl font-light text-primary/90">More</h2>
         {/* <Button variant="ghost" size="icon" onClick={() => setIsOpen(false)}> */}

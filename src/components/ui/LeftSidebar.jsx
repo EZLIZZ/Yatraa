@@ -24,8 +24,8 @@ function SidebarToggle() {
   const isCollapsed = state === "collapsed";
 
   return (
-    <div className={`flex ${isCollapsed ? "justify-center w-full" : ""}`}>
-      <button onClick={toggleSidebar} className="h-10 z-20">
+    <div className={`flex transition-all duration-600 ease-in-out ${isCollapsed ? "justify-center w-full" : ""}`}>
+      <button onClick={toggleSidebar} className="h-10 z-20 transition-transform duration-600">
         <Menu size={28} className="text-primary" />
       </button>
     </div>
@@ -192,8 +192,9 @@ function SidebarMainContent() {
 export default function LeftSidebar() {
   return (
     <Sidebar
+    data-aos="fade-right"
       collapsible="icon"
-      className="bg-white shadow-md"
+      className="bg-white shadow-md transition-[width] duration-700 ease-in-out"
       style={{
         "--sidebar-width": "20rem",
         "--sidebar-width-icon": "8rem",
