@@ -53,13 +53,13 @@ export default function Navbar() {
   ];
 
   return (
-    <div className="fixed w-full h-[70px] bg-[#4b416b] flex items-center justify-between px-5 sm:px-12 py-2 z-50">
+    <div className="fixed w-full h-[80px] bg-[#4b416b] flex items-center justify-between px-5 sm:px-12 py-2 z-50">
       <div className="flex items-center gap-5 sm:gap-10">
         {/* Logo */}
         <Link href="/">
           <img
-            src="/nextW.png"
-            className="h-9 w-32 sm:w-40 object-contain"
+            src="/yatraa.png"
+            className="h-17 w-32 sm:w-60 object-contain"
             alt="Logo"
           />
         </Link>
